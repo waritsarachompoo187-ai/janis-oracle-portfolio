@@ -62,6 +62,47 @@ body {
     animation: morph 8s ease-in-out infinite;
 }
 
+.project-item.featured {
+    border-color: var(--neon-blue);
+    background: rgba(14, 165, 233, 0.1);
+    animation: border-glow 2s infinite alternate;
+}
+
+.badge {
+    display: inline-block;
+    padding: 2px 8px;
+    background: var(--neon-pink);
+    color: white;
+    font-size: 0.6rem;
+    font-weight: 800;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+@keyframes border-glow {
+    0% {
+        box-shadow: 0 0 5px rgba(14, 165, 233, 0.2);
+    }
+
+    100% {
+        box-shadow: 0 0 15px rgba(14, 165, 233, 0.5);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+}
+
+
 @keyframes morph {
 
     0%,
